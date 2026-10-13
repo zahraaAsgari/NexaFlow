@@ -1,0 +1,31 @@
+# Environment files contain secrets — never commit them.
+.env
+.env.*
+!.env.example
+
+# Backup dumps contain password hashes, token hashes, and user PII.
+# They must never enter version control.
+backups/
+
+# Node.js / Next.js build output.
+node_modules/
+.next/
+out/
+build/
+
+# Operating system and editor artifacts.
+.DS_Store
+*.log
+
+# Local secrets and session artifacts
+spN.txt
+*cookie*
+*cookies*
+
+# Local database backups and dumps
+backups/
+*.dump
+*.sql.gz
+
+# Internal reports; keep outside the source repository
+report.txt

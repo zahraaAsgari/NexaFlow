@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/*
+ * NexaFlow design tokens.
+ *
+ * Only the type scale is tokenised for now: colour usage stays on Tailwind's
+ * default palette (slate for surfaces, indigo for brand) so the existing
+ * authentication screens and the application shell remain visually identical.
+ * Layout uses logical CSS properties throughout (ps/pe/ms/me/border-e/start-*)
+ * so the shell mirrors correctly when `dir` is flipped to `rtl`.
+ */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}

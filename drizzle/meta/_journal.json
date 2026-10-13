@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790163506639,
+      "tag": "0000_minor_thunderbird",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790436130614,
+      "tag": "0001_violet_doctor_doom",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791030178693,
+      "tag": "0002_lazy_william_stryker",
+      "breakpoints": true
+    }
+  ]
+}
