@@ -22,11 +22,15 @@ const securityHeaders: { key: string; value: string }[] = [
   // Clickjacking: the app is a SaaS dashboard, never embedded in frames.
   { key: "X-Frame-Options", value: "DENY" },
   // Conservative, app-shaped CSP. Verified to not break hydration or styles.
+  // In development, React's dev build uses new Function() for component stack
+  // traces and the error overlay. 'unsafe-eval' is added in development only so
+  // those debugging features work. Production CSP is unchanged — 'unsafe-eval'
+  // is absent in production builds.
   {
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      `script-src 'self' 'unsafe-inline'${isProd ? "" : " 'unsafe-eval'"}`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data:",
       "font-src 'self'",
